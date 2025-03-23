@@ -1,0 +1,191 @@
+@font-face {
+    font-family: Horizon;
+    src: url('./img/horizon.otf');
+}
+@font-face {
+    font-family: Mush;
+    src: url('./img/Mush.otf');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(./img/webbg.png);
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    font-size: 36px;
+    justify-content: center;
+    position: relative;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.active-btn {
+    background: black;
+    color: white;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.full-page-overlay {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s ease-in-out;
+    flex-direction: column;
+}
+
+.full-page-overlay.active {
+    top: 0;
+}
+
+.full-content {
+    text-align: center;
+}
+
+.overlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " .  cim albumart "
+    ". p . "
+    "spoty . sc";
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.cim {
+    grid-area: cim;
+    font-size: xx-large;
+    font-family: Mush;
+}
+
+.albumart {
+    grid-area: albumart;
+}
+
+.p {
+    grid-area: p;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+.spoty {
+    grid-area: spoty;
+}
+
+.sc {
+    grid-area: sc;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffccff;
+    text-shadow: 2px 2px 4px #000;
+    white-space: nowrap;
+}
+
+.album-art {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.sc img, .spoty img {
+    width: 80px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.spoty:hover, .sc:hover {
+    transform: scale(1.3);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 180px;
+}
+
+.nav-button {
+    background: #876999;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background: #6d457e;
+}
+
+.drop {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+    align-items: center;
+}
+
+
+.wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active {
+    color: white;
+}
+
+.cim:hover {
+    transition: 1s ease-in-out;
+    color: pink;
+}
+
+
+.title a {
+    font-family: Horizon;
+    text-decoration: none;
+    color: white;
+}
+

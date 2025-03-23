@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 style="font-family: Horizon;">
+            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none">
+                TROUBLE IN PARADISE
+            </a>
+        </h1>
+        <button class="toggle-btn" onclick="toggleFullPage()"> 
+            <span class="arrow">&#9660;</span>
+        </button>
+    </header>
+
+    <div class="full-page-overlay" id="fullPage">
+        <div class="full-content">
+            <h2>This page is under construction</h2>
+            <p>The roll down menu is still difficult to make </p>
+            <button onclick="toggleFullPage()">Close</button>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="cim">
+            <h2 class="title">
+                <a href="https://soundcloud.com/trblinparadise/body-pillow" target="_blank" 
+                    style="text-decoration: none; font-family: Mush;">
+                    BODY-PILLOW
+                </a>
+            </h2>
+        </div>
+        <div class="albumart">
+            <a href="https://soundcloud.com/trblinparadise/body-pillow" target="_blank" style="text-decoration: none"><img class="album-art" src="./img/Cover_2.png" alt="Album Cover"></a>
+        </div>
+        <div class="p">
+            <p>Listen on</p>
+        </div>
+        <div class="spoty">
+            <a href="https://open.spotify.com/artist/38EJnisCSzzHp1HwcNybhw" target="_blank" style="text-decoration: none"><img src="./img/spotify.png" alt="Spotify"></a>
+        </div>
+        <div class="sc">
+            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none"><img src="./img/sc2.png" alt="Sc"></a>
+        </div>
+    </div>
+
+    <nav>
+        <button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">EVENTS</button>
+        <button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">TOUR</button>
+    </nav>
+
+    <script>
+        function toggleFullPage() {
+            const fullPage = document.getElementById("fullPage");
+            const arrow = document.querySelector(".arrow");
+            const button = document.getElementById("toggleButton");
+
+            fullPage.classList.toggle("active");
+            arrow.style.transform = fullPage.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
+            button.classList.toggle("active-btn");
+        }
+    </script>
+</body>
+</html>
