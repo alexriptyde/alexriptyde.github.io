@@ -9,20 +9,56 @@
 <body>
     <header>
         <h1 style="font-family: Horizon;">
-            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none">
+            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none", class="animated-title">
                 TROUBLE IN PARADISE
             </a>
         </h1>
-        <button class="toggle-btn" onclick="toggleFullPage()"> 
+        </div>
+        <button class="toggle-btn" id="toggleButton" onclick="toggleFullPage()"> 
             <span class="arrow">&#9660;</span>
         </button>
     </header>
 
     <div class="full-page-overlay" id="fullPage">
         <div class="full-content">
-            <h2>This page is under construction</h2>
-            <p>The roll down menu is still difficult to make </p>
-            <button onclick="toggleFullPage()">Close</button>
+            <div class="album-row">
+                <div class="album-wrapper">
+                    <a href="https://soundcloud.com/trblinparadise/body-pillow" target="_blank" style="text-decoration: none"><img class="album-cover" src="./img/Cover_2.png" alt="Album 1" ></a>
+                    <div class="album-title-overlay">BODY-PILLOW</div>
+                </div>
+                <div class="album-wrapper">
+                    <a href="https://soundcloud.com/trblinparadise/who-let-him-cook-breakcore"target="_blank" style="text-decoration: none"><img class="album-cover" src="./img/album2.jpg" alt="Album 2"></a>
+                    <div class="album-title-overlay">WHO LET HIM COOK BREAKCORE</div>
+                </div>
+                <div class="album-wrapper">
+                    <a href="https://soundcloud.com/trblinparadise/corporate-music"target="_blank" style="text-decoration: none"><img class="album-cover" src="./img/album3.jpg" alt="Album 3"></a>
+                    <div class="album-title-overlay">CORPORATE MUSIC</div>
+                </div>
+                <div class="album-wrapper">
+                    <a href="https://soundcloud.com/trblinparadise/sets/primavera"target="_blank" style="text-decoration: none"><img class="album-cover" src="./img/album4.jpg" alt="Album 4"></a>
+                    <div class="album-title-overlay">PRIMVERA</div>
+                </div>
+                <div class="album-wrapper">
+                    <a href="https://soundcloud.com/trblinparadise/shrt_thonk"target="_blank" style="text-decoration: none"><img class="album-cover" src="./img/album5.jpg" alt="Album 5"></a>
+                    <div class="album-title-overlay">SHRT_THONK</div>
+                </div>
+                
+            </div>
+            <div class="listen-label">LISTEN ON</div>
+                <div class="listen-icons">
+                    <a href="https://open.spotify.com/artist/38EJnisCSzzHp1HwcNybhw"target="_blank" style="text-decoration: none"><img src="./img/spotify.png" alt="Spotify"></a>
+                    <a href="https://soundcloud.com/trblinparadise"target="_blank" style="text-decoration: none"><img src="./img/sc2.png" alt="SoundCloud"></a>
+                    <a href="https://music.apple.com/us/artist/troubleinparadise/1745387228"target="_blank" style="text-decoration: none"><img src="./img/Apple_Music_logo.png" alt="Apple Music"></a>
+                    <a href="https://music.amazon.com/artists/B07YMR62ZB/troubleinparadise"target="_blank" style="text-decoration: none"><img src="./img/amazon-music.png" alt="Amazon Music"></a>
+                    <a href="https://www.deezer.com/us/artist/75044262"target="_blank" style="text-decoration: none"><img src="./img/deezer.png" alt="Deezer"></a>
+                </div>
+                <div class="footer-links">
+                    <a href="./bio.html">Bio</a>
+                    <span class="divider">|</span>
+                    <a href="./blog.html">Blog</a>
+                    <span class="divider">|</span>
+                    <a href="./links.html">Links</a>
+                </div>
         </div>
     </div>
 
@@ -31,7 +67,7 @@
             <h2 class="title">
                 <a href="https://soundcloud.com/trblinparadise/body-pillow" target="_blank" 
                     style="text-decoration: none; font-family: Mush;">
-                    BODY-PILLOW
+                    B O D Y - P I L L O W
                 </a>
             </h2>
         </div>
@@ -42,28 +78,32 @@
             <p>Listen on</p>
         </div>
         <div class="spoty">
-            <a href="https://open.spotify.com/artist/38EJnisCSzzHp1HwcNybhw" target="_blank" style="text-decoration: none"><img src="./img/spotify.png" alt="Spotify"></a>
+            <a href="https://open.spotify.com/artist/38EJnisCSzzHp1HwcNybhw" target="_blank" style="text-decoration: none", class="spoty glow-on-hover"><img src="./img/spotify.png" alt="Spotify"></a>
         </div>
         <div class="sc">
-            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none"><img src="./img/sc2.png" alt="Sc"></a>
+            <a href="https://soundcloud.com/trblinparadise" target="_blank" style="text-decoration: none", class="sc glow-on-hover"><img src="./img/sc2.png" alt="Sc"></a>
         </div>
     </div>
 
     <nav>
-        <button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">EVENTS</button>
-        <button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">TOUR</button>
+        <a href="events.html"><button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">EVENTS</button></a>
+        <a href="merch.html"><button class="nav-button" style="font-family: Arial, Helvetica, sans-serif">MERCH</button></a>
     </nav>
 
     <script>
         function toggleFullPage() {
-            const fullPage = document.getElementById("fullPage");
-            const arrow = document.querySelector(".arrow");
-            const button = document.getElementById("toggleButton");
+        const fullPage = document.getElementById("fullPage");
+        const arrow = document.querySelector(".arrow");
+        const button = document.getElementById("toggleButton");
 
-            fullPage.classList.toggle("active");
-            arrow.style.transform = fullPage.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
-            button.classList.toggle("active-btn");
-        }
+        fullPage.classList.toggle("active");
+
+        // Toggle arrow rotation
+        arrow.classList.toggle("rotated");
+
+        // Toggle button styling (optional visual feedback)
+        button.classList.toggle("active-btn");
+    }
     </script>
 </body>
 </html>
